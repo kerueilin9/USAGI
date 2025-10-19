@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "usagi"
+version = "0.1.0"
+description = "LLM-driven GUI crawler example"
+authors = ["kerueilin9 <you@example.com>"]
+license = "MIT"
+packages = [
+	{ include = "usagi" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+playwright = "^1.41.0"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+langchain = "^0.3.0"
+langchain-google-genai = "^2.0.8"
+
+[tool.poetry.scripts]
+usagi = "usagi.main:run"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
